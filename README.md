@@ -101,7 +101,7 @@ const url = svg2Url(svgString);
 // set img element's src to url
 imgEle.src = url;
 ```
-This way can be used for browser & 小程序。
+This way can be used for browser & 小程序 or any client can render svg.
 
 ## Use it in Node.js server
 ```js
