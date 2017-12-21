@@ -88,7 +88,7 @@ Output svgString content:
 - `color` (string) -barcode color (default: '#000000');
 
 
-## Use it with <img> tag
+## Use it with `<img/>` tag
 ```js
 const {qrcode,svg2Url} = require('pure-svg-code');
 const svgString = qrcode('data');
