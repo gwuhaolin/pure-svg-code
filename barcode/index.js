@@ -974,9 +974,7 @@ var barcode = {
     }
 
     if (settings.showHRI) {
-      svg += '<g transform="translate(' + Math.floor(width / 2) + ' 0)">';
-      svg += '<text y="' + (height - Math.floor(fontSize / 2)) + '" text-anchor="middle" style="font-family: Arial; font-size: ' + fontSize + 'px;" fill="' + settings.color + '">' + hri + '</text>';
-      svg += '</g>';
+      svg += '<text transform="translate(50 0)" y="60" text-anchor="middle">' + hri + '</text>';
     }
     // svg footer
     svg += '</svg>';
