@@ -8,7 +8,10 @@
     "svg",
     "javascript",
     "二维码",
-    "条形码"
+    "条形码",
+    "Node.js",
+    "Browser",
+    "小程序"
   ],
   "main": "index.js",
   "scripts": {
