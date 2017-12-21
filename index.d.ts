@@ -37,7 +37,7 @@ export function qrcode(options: string | {
    */
   content: string;
   /**
-   * white space padding, `4` modules by default, `0` for no border
+   * white space padding, `0` for no border by default
    */
   padding?: number;
   /**

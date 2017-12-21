@@ -650,7 +650,7 @@ function QRCode(options) {
 
   //Default options
   this.options = {
-    padding: 4,
+    padding: 0,
     width: 256,
     height: 256,
     typeNumber: 4,

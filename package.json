@@ -1,6 +1,6 @@
 {
   "name": "pure-svg-code",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "generate qrcode & barcode to svg in pure javascript",
   "keywords": [
     "qrcode",
