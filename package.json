@@ -1,0 +1,22 @@
+{
+  "name": "pure-svg-code",
+  "version": "1.0.0",
+  "description": "generate qrcode & barcode to svg in pure javascript",
+  "keywords": [
+    "qrcode",
+    "barcode",
+    "svg",
+    "javascript",
+    "二维码",
+    "条形码"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha barcode qrcode"
+  },
+  "author": "gwuhaolin",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^4.0.1"
+  }
+}
