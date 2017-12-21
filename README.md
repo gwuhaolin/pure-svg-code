@@ -92,11 +92,11 @@ Output [svg content](barcode/barcode.svg):
 - int25 (interleaved 2 of 5)
 
 #### Support options:
-- `barHeight` (number) -height of svg (default: 30);
-- `width` (number) -width of svg (default: 100);
-- `bgColor` (string) -background color css like (default: 'transparent');
-- `color` (string) -barcode color (default: '#000000');
-
+- `barHeight` height of svg (default: 30);
+- `width` width of svg (default: 100);
+- `bgColor` background color css like (default: 'transparent');
+- `color` barcode color (default: '#000000');
+- `showHRI`: should show text under bar;
 
 ## Use it with `<img/>` tag
 ```js

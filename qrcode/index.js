@@ -772,22 +772,17 @@ function QRCode(options) {
 }
 
 /** Generates QR Code as SVG image */
-QRCode.prototype.svg = function (opt) {
-  if (typeof opt == "undefined") {
-    opt = {container: "svg"};
-  }
-
+QRCode.prototype.svg = function () {
   var options = this.options;
   var modules = this.qrcode.modules;
 
-  var EOL = '\r\n';
   var width = options.width;
   var height = options.height;
   var length = modules.length;
   var xsize = width / (length + 2 * options.padding);
   var ysize = height / (length + 2 * options.padding);
 
-  var rect = '<rect x="0" y="0" width="' + width + '" height="' + height + '" style="fill:' + options.background + ';shape-rendering:crispEdges;"/>' + EOL;
+  var rect = '<rect x="0" y="0" width="' + width + '" height="' + height + '" style="fill:' + options.background + ';shape-rendering:crispEdges;"/>';
 
   for (var y = 0; y < length; y++) {
     for (var x = 0; x < length; x++) {
@@ -795,29 +790,14 @@ QRCode.prototype.svg = function (opt) {
       if (module) {
         var px = (x * xsize + options.padding * xsize).toString();
         var py = (y * ysize + options.padding * ysize).toString();
-        rect += '<rect x="' + px + '" y="' + py + '" width="' + xsize + '" height="' + ysize + '" style="fill:' + options.color + ';shape-rendering:crispEdges;"/>' + EOL;
+        rect += '<rect x="' + px + '" y="' + py + '" width="' + xsize + '" height="' + ysize + '" style="fill:' + options.color + ';shape-rendering:crispEdges;"/>';
       }
     }
   }
 
-  var svg = "";
-  switch (opt.container) {
-    case "svg":
-      svg += '<?xml version="1.0" standalone="yes"?>' + EOL + '<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="' + width + '" height="' + height + '">' + EOL;
-      svg += rect;
-      svg += '</svg>';
-      break;
-
-    case "g":
-      svg += '<g width="' + width + '" height="' + height + '">' + EOL;
-      svg += rect;
-      svg += '</g>';
-      break;
-
-    default:
-      svg += rect;
-      break;
-  }
+  var svg = '<?xml version="1.0" standalone="yes"?>' + '<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="' + width + '" height="' + height + '">';
+  svg += rect;
+  svg += '</svg>';
 
   return svg;
 };

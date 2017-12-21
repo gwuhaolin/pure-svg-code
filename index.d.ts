@@ -25,6 +25,10 @@ export function barcode(data: string,
                            * (string) -barcode color (default: '#000000');
                            */
                           color?: string;
+                          /**
+                           * should show text under bar
+                           */
+                          showHRI?: boolean;
                         }): string;
 
 export function qrcode(options: string | {
