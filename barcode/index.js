@@ -939,13 +939,13 @@ var barcode = {
       height += barcode.intval(settings.marginHRI) + fontSize;
     }
     // svg header
-    var svg = '<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 ' + width + ' ' + height + '" >';
+    var svg = '<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 ' + width + ' ' + height + '">';
     if (settings.bgColor !== 'transparent') {
       // background
-      svg += '<rect width="' + width + '" height="' + height + '" x="0" y="0" fill="' + settings.bgColor + '" />';
+      svg += '<rect width="' + width + '" height="' + height + '" x="0" y="0" fill="' + settings.bgColor + '"/>';
     }
 
-    var bar1 = '<rect width="&W" height="' + mh + '" x="&X" y="&Y" fill="' + settings.color + '" />';
+    var bar1 = '<rect width="&W" height="' + mh + '" x="&X" y="&Y" fill="' + settings.color + '"/>';
     if (settings.color === "#000000") {
       bar1 = '<rect width="&W" height="' + mh + '" x="&X" y="&Y"/>';
     }

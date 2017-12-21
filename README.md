@@ -34,6 +34,17 @@ const svgString = qrcode({
 })
 ```
 
+Output svgString content:
+```xml
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="256" height="256">
+<rect x="0" y="0" width="256" height="256" style="fill:#ffffff;shape-rendering:crispEdges;"/>
+<rect x="35.310344827586206" y="35.310344827586206" width="8.827586206896552" height="8.827586206896552" style="fill:#000000;shape-rendering:crispEdges;"/>
+<rect x="44.13793103448276" y="35.310344827586206" width="8.827586206896552" height="8.827586206896552" style="fill:#000000;shape-rendering:crispEdges;"/>
+...
+</svg>
+```
+
 #### List of options:
 - `content` - QR Code content, required
 - `padding` - white space padding, `4` modules by default, `0` for no border
@@ -51,6 +62,14 @@ required ones.
 var svgString = barcode("9234567890128", "ean13", {width:'50', barWidth:1, barHeight:50});
 ```
 
+Output svgString content:
+```xml
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 50" >
+  <rect width="2.0" height="50" x="0.0" y="0"/>
+  <rect width="3.9" height="50" x="3.9" y="0"/>
+  ...
+</svg>
+```
 #### Support types:
 - codabar
 - code11 (code 11)
