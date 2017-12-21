@@ -21,6 +21,10 @@ const barcode = require('pure-svg-code/barcode');
 const qrcode = require('pure-svg-code/qrcode');
 ```
 
+#### File size:
+- qrcode: minified 17Kb, Gzip 5.7Kb
+- barcode: minified 19Kb, Gzip 6.2Kb
+
 ## qrcode
 ```js
 const svgString = qrcode({
