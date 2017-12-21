@@ -4,7 +4,12 @@
 
 
 # pure-svg-code
-Generate qrcode & barcode to svg in pure javascript, can be used in browser & Node.js & 小程序, small no dependency.
+Generate qrcode and barcode
+
+## Feature
+- SVG: can be used in any client support render svg like browser & 小程序 & Node.js;
+- Small: write in pure javascript, no dependency;
+- Typescript: support Typescript;  
 
 ## Install
 Install from npm:
@@ -14,11 +19,12 @@ npm i pure-svg-code
 Import it:
 ```js
 // import both
-const {barcode,qrcode} = require('pure-svg-code');
+const {barcode,qrcode,svg2url} = require('pure-svg-code');
 
 // import as you need
 const barcode = require('pure-svg-code/barcode');
 const qrcode = require('pure-svg-code/qrcode');
+const svg2url = require('pure-svg-code/svg2url');
 ```
 
 #### File size:
@@ -38,7 +44,7 @@ const svgString = qrcode({
 })
 ```
 
-Output svgString content:
+Output [svg content](qrcode/qrcode.svg):
 ```xml
 <?xml version="1.0" standalone="yes"?>
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="256" height="256">
@@ -66,7 +72,7 @@ required ones.
 var svgString = barcode("9234567890128", "ean13", {width:'50', barWidth:1, barHeight:50});
 ```
 
-Output svgString content:
+Output [svg content](barcode/barcode.svg):
 ```xml
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 50" >
   <rect width="2.0" height="50" x="0.0" y="0"/>
@@ -94,9 +100,9 @@ Output svgString content:
 
 ## Use it with `<img/>` tag
 ```js
-const {qrcode,svg2Url} = require('pure-svg-code');
+const {qrcode,svg2url} = require('pure-svg-code');
 const svgString = qrcode('data');
-const url = svg2Url(svgString);
+const url = svg2url(svgString);
 
 // set img element's src to url
 imgEle.src = url;

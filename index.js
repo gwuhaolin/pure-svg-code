@@ -1,12 +1,9 @@
 var barcode = require('./barcode');
 var qrcode = require('./qrcode');
-
-function svg2Url(svgString) {
-  return 'data:image/svg+xml;utf8,' + svgString;
-}
+var svg2url = require('./svg2url');
 
 module.exports = {
   barcode,
   qrcode,
-  svg2Url,
+  svg2url,
 };
