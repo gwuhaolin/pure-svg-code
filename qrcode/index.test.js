@@ -9,3 +9,8 @@ it('equal', () => {
     encoding: 'utf8'
   }))
 });
+
+it('out file', () => {
+  const svg = qrcode('123');
+  fs.writeFileSync(path.resolve(__dirname, 'qrcode.svg'), svg);
+});
